@@ -16,16 +16,18 @@ This repository contains the data collection, exploratory data analysis (EDA), a
 3. Open `DSA210_Project_EDA.ipynb` in Google Colab and run the cells sequentially. The data files will be loaded locally from the `data/` directory.
 
 ## Current Progress (Until April 14 Deadline)
-* **Data Collection:** Successfully fetched road network data (drive network) and building footprints for Caferağa, Kadıköy using `osmnx`.
-* **Enrichment:** Performed a spatial join (20-meter buffer) to calculate the "structural density" (building count per road segment) for each road.
-* **EDA:** Visualized the distribution of building counts and the relationship between road length and building density.
-* **Hypothesis Testing:** Conducted a Pearson correlation test showing a statistically significant relationship (p < 0.05) between road length and building count. 
+**Data Collection:** Successfully fetched road network data (drive network) and building footprints for Caferağa, Kadıköy using `osmnx`.
+**Enrichment:** Performed a spatial join (20-meter buffer) to calculate the "structural density" (building count per road segment) for each road.
+**EDA:** Visualized the distribution of building counts and the relationship between road length and building density.
+**Hypothesis Testing:** Conducted a Pearson correlation test showing a statistically significant relationship (p < 0.05) between road length and building count. 
+
+## Deviations from Proposal & Data Limitations
+In the initial project proposal, it was stated that seismic risk maps (PGA values) from the IBB Open Data Portal or AFAD would be integrated into the dataset. However, due to API access issues and formatting challenges within the current timeframe, the "enrichment" requirement was fulfilled primarily by extracting building footprints and computing the "structural density" via spatial joins. Integrating the external seismic risk data is planned as future work for the final Machine Learning phase if possible.
 
 ## AI Usage Statement
 **Mandatory Disclosure:** AI tools (Google Gemini) were used during the development of this project for educational and debugging purposes.
-* **Specific Prompts Used:** Prompts such as "How can I spatially join building polygons to road line strings using geopandas?", "Help me fix the AttributeError: module 'osmnx' has no attribute 'geometries_from_place'", and requests to translate code comments into English were used.
-* **Outputs Generated:** The AI assisted in refactoring the `geopandas` buffer logic, and fixing deprecated `osmnx` function names. All final code logic was reviewed, tested, and assembled by me.
+**Specific Prompts Used:** Prompts such as "How can I spatially join building polygons to road line strings using geopandas?", "Help me fix the AttributeError: module 'osmnx' has no attribute 'geometries_from_place'", and requests to translate code comments into English were used.
+**Outputs Generated:** The AI assisted in refactoring the `geopandas` buffer logic, and fixing deprecated `osmnx` function names. All final code logic was reviewed, tested, and assembled by me.
 
----
 **Author:** Adil Burak Şirin
 **Student ID:** 35561
