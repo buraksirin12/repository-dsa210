@@ -22,7 +22,11 @@ This repository contains the data collection, exploratory data analysis (EDA), a
 **Hypothesis Testing:** Conducted a Pearson correlation test showing a statistically significant relationship (p < 0.05) between road length and building count. 
 
 ## Deviations from Proposal & Data Limitations
-In the initial project proposal, it was stated that seismic risk maps (PGA values) from the IBB Open Data Portal or AFAD would be integrated into the dataset. However, due to API access issues and formatting challenges within the current timeframe, the "enrichment" requirement was fulfilled primarily by extracting building footprints and computing the "structural density" via spatial joins. Integrating the external seismic risk data is planned as future work for the final Machine Learning phase if possible.
+There are two main deviations from the initial project proposal:
+
+1. **Dataset Size:** While the proposal targeted 1,000-5,000 segments, the current analysis focuses on the Caferağa (Moda) neighborhood, resulting in 332 road segments. This specific neighborhood was selected as a high-density "pilot area" to ensure high-quality spatial analysis and structural density calculations within the current timeline.
+2. **External Data Integration:** The integration of seismic risk maps (PGA values) from the IBB Open Data Portal or AFAD was initially planned. However, due to formatting challenges and API access limitations, the "enrichment" requirement was fulfilled by extracting and spatially joining building footprints to the road network.Integrating the external seismic risk data is planned as future work for the final Machine Learning phase if possible.
+
 
 ## AI Usage Statement
 **Mandatory Disclosure:** AI tools (Google Gemini) were used during the development of this project for educational and debugging purposes.
